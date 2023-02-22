@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlyFlappyBird : MonoBehaviour {
 
+    public GameManager gameManager;
     public float velocity = 1.4f;
     private Rigidbody2D rb;
 
@@ -18,5 +19,9 @@ public class FlyFlappyBird : MonoBehaviour {
             // Jump
             rb.velocity = Vector2.up * velocity;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        gameManager.GameOver();
     }
 }
