@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour{
 
     private void Start() {
         Time.timeScale = 1;
+        gameOverCanvas.SetActive(false);
     }
 
     public void GameOver() {
